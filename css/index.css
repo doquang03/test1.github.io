@@ -1,0 +1,291 @@
+/* global */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* end css global */
+
+/* csss header */
+
+.header {
+    background-color: white;
+    height: 70px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    /* nội dung ra giữa theo chiều dọc */
+    align-items: center;
+    /* tạo bóng dưới thanh header */
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+    /* giữ thanh menu cố định khi scroll */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.header_logo img {
+    width: 10rem;
+}
+
+.header_nav ul {
+    list-style: none;
+}
+
+.header_nav ul li {
+    display: inline;
+    margin: 0px 15px;
+}
+
+/* active tag li de to mau co san */
+
+.header_nav ul li.active a {
+    color: #fa5238;
+}
+
+.header_nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    /* transition giup thay doi thuoc tinh trong the a */
+    transition: all 0.4s;
+}
+
+/* hover vo the a doi mau */
+
+.header_nav ul li a:hover {
+    color: #fa5238;
+}
+
+.header_login {
+    color: gray;
+    font-size: 1.6rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header_login i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+/* end csss header */
+
+/* carousel */
+
+.carousel {
+    margin-top: 0px;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+/* end carousel */
+
+/* css movie */
+
+.section_title {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    margin: 1.5rem;
+}
+
+.section_title span {
+    margin: 0px 1rem;
+    transition: all 0.4s;
+    color: black;
+    /* con trỏ đổi thành bàn tay */
+    cursor: pointer;
+}
+
+.section_title span:hover {
+    color: #fa5238;
+    font-size: 3rem;
+    text-decoration: #fa5238;
+}
+
+.section_title span.active {
+    color: #fa5238;
+}
+
+.movie__content {
+    padding: 0 10%;
+}
+
+.movie_item img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+.movie_item p {
+    /* thẻ p đang xuất hiện */
+    font-size: 1.5rem;
+}
+
+.movie_item .btn-read-more {
+    background-color: #fa5238;
+    color: white;
+    padding: 0.7rem 0;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    /* Lúc đầu buttom sẽ ko xuất hiện */
+    display: none;
+    margin-top: 5px;
+}
+
+.movie_item:hover .btn-read-more {
+    /* sau khi hover sẽ xuất hiện và mất thẻ p */
+    display: block;
+}
+
+.movie_item:hover p {
+    /* mất thẻ p */
+    display: none;
+}
+
+/* end css movie */
+
+/* customize owlcarousel  */
+
+.movie .owl-prev {
+    position: absolute;
+    top: 30%;
+    left: -3rem;
+}
+
+.movie .owl-prev span {
+    font-size: 5rem;
+}
+
+.movie .owl-next {
+    position: absolute;
+    top: 30%;
+    right: -3rem;
+}
+
+.movie .owl-next span {
+    font-size: 5rem;
+}
+
+/* end customize */
+
+/* news css */
+
+.news_content {
+    /* dung grid để chia cột */
+    display: grid;
+    /* 3 cột  */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* set chiều dài của từng dòng
+    nếu lớn hơn 300px thì auto
+    */
+    grid-auto-rows: minmax(300px, auto);
+    padding: 0 10%;
+    /* khoảng cách cột dọc giữa các hình */
+    grid-gap: 10px;
+}
+
+/* đổi thẻ a thành block */
+
+.news_content a {
+    display: block;
+    height: 100%;
+}
+
+/* end news css */
+
+/* custumize hover effect*/
+
+.news_content .grid {
+    padding: 0;
+}
+
+.news_content .grid figure {
+    min-width: unset;
+    max-width: unset;
+    max-height: unset;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+
+.news_content figure.effect-ruby p {
+    padding: 1rem;
+}
+
+.news_content figure.effect-ruby {
+    background-color: #fa5238;
+}
+
+/* end custumize */
+
+/* css contact */
+.contact .section_title{
+    color: white;
+
+}
+.contact{
+    background-color: #fa5238;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contact_content {
+    padding: 0 20%; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+.contact_form{
+    background-color: white;
+
+}
+/* custumize Inputeffect */
+.contact_form .input{
+    max-width: unset;
+    width: 90%;
+    margin: 5px auto;
+}
+ .input__field--hoshi{
+     font-size: 1.1rem;
+     font-weight: normal;
+     float: left;
+     width: 100%;
+ }
+ .input__label--hosho{
+    float: left;
+    width: 100%;
+ }
+ .input__label--hoshi-color-1::after{
+     border-bottom:2px solid #fa5238
+ }
+ .contact_form form{
+     text-align: center;
+ }
+/* end contact */
+.btn-back-to-top{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 10;
+    font-size: 30px;
+}
+
+
+

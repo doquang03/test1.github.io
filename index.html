@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- swiper lib-->
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <!-- owlcarousel lib -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <!-- hovereffect -->
+    <link rel="stylesheet" href="./css/set1.css">
+    <!-- lightbox -->
+    <link rel="stylesheet" href="./css/lightbox.min.css">
+    <!-- inputeffect -->
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/set1-input.css">
+    <link rel="stylesheet" href="./css/set2-input.css">
+
+
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <a href="#" class="header_logo">
+            <img src="./img/logo.svg" alt="">
+        </a>
+        <nav class="header_nav navbar-expand-sm">
+            <ul>
+                <li class="active"><a href="">Lịch chiếu</a> </li>
+                <li> <a href="">Cụm rạp</a></li>
+                <li><a href="#news">Tin tức</a></li>
+                <li><a href="">Ứng dụng</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="header_login">
+            <i class="fa fa-user-circle"></i>
+            <span>Đăng nhập:</span>
+        </a>
+    </header>
+
+
+    <!-- carousel -->
+
+    <!-- Swiper -->
+    <section class="carousel" id="carousel">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/hero-1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/hero-2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/hero-3.jpg" alt="">
+                </div>
+            </div>
+            <!-- thanh điều hướng -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- pagination la nhung dau cham duoi bg-img -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- end carousel -->
+
+
+    <section class="movie container">
+        <!-- dat ten giong ten cac tieu de ben duoi nen ko can giong cha -->
+        <h1 class="section_title">
+            <span class="active">
+                Đang chiếu
+            </span>
+            <span>
+                Sắp chiếu
+            </span>
+        </h1>
+        <div class="moive_content">
+
+            <div class="owl-carousel owl-theme">
+                <div class="movie_item item">
+                    <img src="./img/movie-1.jpg" alt="">
+                    <p>Name of Phim</p>
+                    <button class="btn-read-more">
+                        More
+                    </button>
+                </div>
+                <div class="movie_item item">
+                    <img src="./img/movie-2.jpg" alt="">
+                    <p>Name of Phim</p>
+                    <button class="btn-read-more">
+                        More
+                    </button>
+                </div>
+                <div class="movie_item item">
+                    <img src="./img/movie-3.jpg" alt="">
+                    <p>Name of Phim</p>
+                    <button class="btn-read-more">
+                        More
+                    </button>
+                </div>
+                <div class="movie_item item">
+                    <img src="./img/movie-4.jpg" alt="">
+                    <p>Name of Phim</p>
+                    <button class="btn-read-more">
+                        More
+                    </button>
+                </div>
+                <div class="movie_item item">
+                    <img src="./img/movie-5.jpg" alt="">
+                    <p>Name of Phim</p>
+                    <button class="btn-read-more">
+                        More
+                    </button>
+                </div>
+                <div class="movie_item item">
+                    <img src="./img/movie-6.jpg" alt="">
+                    <p>Name of Phim</p>
+                    <button class="btn-read-more">
+                        More
+                    </button>
+                </div>
+                <div class="movie_item item">
+                    <img src="./img/movie-7.jpg" alt="">
+                    <p>Name of Phim</p>
+                    <button class="btn-read-more">
+                        More
+                    </button>
+                </div>
+            </div>
+    </section>
+    <!-- news -->
+    <!-- dùng thư viện mixitup -->
+    <section class="news" id="news">
+        <h1 class="section_title">
+            <!-- data-filter dùng để đặt tên class
+             -- lát nữa sẽ gọi trong mix.
+            -->
+            <span class="active" data-filter=".dienanh">Điện ảnh</span>
+            <span data-filter=".review">Review</span>
+            <span data-filter=".saleoff">Khuyễn Mãi</span>
+        </h1>
+
+        <div class="news_content">
+            <!-- gắn "mix .[tên class data-filter] để click sẽ di chuyển đến mục đó" -->
+            <div class="grid mix dienanh">
+                <!-- dùng thư viện lightbox để click vô hình sẽ hiện to lên màn hình vì(nó được bao bọc bởi thẻ a) -->
+                <!-- dùng class data-lightbox -->
+                <a href="./img/movie-12.jpg" data-lightbox="gallery_1">
+                    <!-- dùng thư viện hover effect -->
+                    <figure class="effect-ruby">
+                        <img src="./img/movie-12.jpg" width="100%" />
+                        <figcaption>
+                            <h2>Ghost
+                                <span>of War</span>
+                            </h2>
+                            <p>Horro.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="grid mix dienanh">
+                <a href="./img/movie-13.jpg" data-lightbox="gallery_1">
+                    <figure class="effect-ruby">
+                        <img src="./img/movie-13.jpg" width="100%" />
+                        <figcaption>
+                            <h2>Soldier
+
+                            </h2>
+                            <p>Romantic.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="grid mix dienanh">
+                <a href="./img/movie-14.jpg" data-lightbox="gallery_1">
+                    <figure class="effect-ruby">
+                        <img src="./img/movie-14.jpg" width="100%" />
+                        <figcaption>
+                            <h2>IT
+                                <span></span>
+                            </h2>
+                            <p>Discover.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="grid mix dienanh">
+                <a href="">
+                    <figure class="effect-ruby">
+                        <img src="./img/movie-7.jpg" width="100%" />
+                        <figcaption>
+                            <h2>The end
+                                <span></span>
+                            </h2>
+                            <p>Discover.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="grid mix review">
+                <a href="">
+                    <figure class="effect-ruby">
+                        <img src="./img/movie-8.jpg" width="100%" />
+                        <figcaption>
+                            <h2>The end
+                                <span></span>
+                            </h2>
+                            <p>Discover.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="grid mix saleoff">
+                <a href="">
+                    <figure class="effect-ruby">
+                        <img src="./img/movie-9.jpg" width="100%" />
+                        <figcaption>
+                            <h2>The end
+                                <span></span>
+                            </h2>
+                            <p>Discover.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- end news -->
+    <section class="contact">
+        <h1 class="section_title">Contact Us</h1>
+        <div class="contact_content">
+            <div class="contact_form">
+                <h2>Feel free contact to me</h2>
+                <div class="contact_form">
+                    <form action="">
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="text" id="input-4" />
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                <span class="input__label-content input__label-content--hoshi">Name</span>
+                            </label>
+                        </span>
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="text" id="input-4" />
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                <span class="input__label-content input__label-content--hoshi">Email</span>
+                            </label>
+                        </span>
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="text" id="input-4" />
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                <span class="input__label-content input__label-content--hoshi">Supject</span>
+                            </label>
+                        </span>
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="text" id="input-4" />
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                <span class="input__label-content input__label-content--hoshi">Message</span>
+                            </label>
+                        </span>
+                        <button class="btn btn-danger">Đăng Ký</button>
+                    </form>
+                </div>
+            </div>
+            <div class="contact_infor"></div>
+        </div>
+    </section>
+    <a class="btn-back-to-top" href="#carousel"><i class="fa fa-chevron-up"></i></a>
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <!-- swiper libary -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- owlcarousel libary -->
+    <script src="./js/owl.carousel.min.js"></script>
+
+    <!-- MixitUp libary -->
+    <script src="./js/mixitup.min.js"></script>
+    <!-- lightbox libary -->
+    <script src="./js/lightbox.min.js"></script>
+    <!-- Inputeffect -->
+    <script src="./js/classie.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="./js/navbar-fixed.js"></script>
+
+    <!-- script cua swiper -->
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // chay het ba hinh chay lai
+            loop: true,
+            autoplay: true,
+            // dau cham duoi bg-img
+            pagination: {
+                el: '.swiper-pagination',
+                // them thuoc tinh click de click dc cham
+                clickable: true,
+            },
+            //thanh dieu huong
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: 'swiper-button-prev',
+            },
+        })
+    </script>
+    <!-- end script swiper -->
+
+    <!-- script owlcarousel -->
+    <script>
+        $('.owl-carousel').owlCarousel({
+            //loop la lap lai hinh
+            loop: true,
+            autoplay: true,
+            //khoang cach item
+            margin: 10,
+            //thanh dieu huong
+            nav: true,
+            responsive: {
+                //kich thuoc man hinh >0 => 1 items
+                0: {
+                    items: 1
+                },
+                //kich thuoc man hinh >600 => 3 items
+                600: {
+                    items: 3
+                },
+                //kich thuoc man hinh > 1000 =>5 items
+                1000: {
+                    items: 5
+                }
+            }
+        })
+        // end script owlcarousel
+
+
+        // script MIXITUP
+        var mixer = mixitup('.news_content');//class news_content ở trên
+        //vừa load trang lên sẽ tự động lựa class dienanh để hiện.
+        mixer.filter('.dienanh');
+        // end mixitup
+    </script>
+
+
+    <!-- SCRIPT INPUT EFFETC -->
+    <script>
+        (function () {
+            // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+            if (!String.prototype.trim) {
+                (function () {
+                    // Make sure we trim BOM and NBSP
+                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                    String.prototype.trim = function () {
+                        return this.replace(rtrim, '');
+                    };
+                })();
+            }
+
+            [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+                // in case the input is already filled..
+                if (inputEl.value.trim() !== '') {
+                    classie.add(inputEl.parentNode, 'input--filled');
+                }
+
+                // events:
+                inputEl.addEventListener('focus', onInputFocus);
+                inputEl.addEventListener('blur', onInputBlur);
+            });
+
+            function onInputFocus(ev) {
+                classie.add(ev.target.parentNode, 'input--filled');
+            }
+
+            function onInputBlur(ev) {
+                if (ev.target.value.trim() === '') {
+                    classie.remove(ev.target.parentNode, 'input--filled');
+                }
+            }
+        })();
+    </script>
+    <!-- end input -->
+
+
+
+</body>
+
+</html>
